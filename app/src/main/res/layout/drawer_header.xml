@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="center"
+    android:padding="16dp"
+    android:layout_height="180dp">
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="80dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/drawerImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            />
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/circle_black"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="17sp"
+        android:textColor="#FFEB3B"
+        android:layout_gravity="center"
+        android:id="@+id/drawerName"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFEB3B"
+        android:layout_gravity="center"
+        android:id="@+id/drawerGmail"/>
+</LinearLayout>

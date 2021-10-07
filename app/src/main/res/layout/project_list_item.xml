@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="project"
+            type="com.example.anilscreation.gitHubUser.model.Project" />
+        <variable
+            name="callback"
+            type="com.example.anilscreation.gitHubUser.ProjectClickCallBack" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->callback.onClick(project)}"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Project Name"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:text="@{project.name}"/>
+
+            <TextView
+                android:id="@+id/languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="project description"
+                android:textSize="17sp"
+                android:text="@{String.format(@string/languages, project.language)}"/>
+
+            <TextView
+                android:id="@+id/project_watchers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="project watcher"
+                android:textSize="17sp"
+                android:text="@{String.format(@string/watchers, project.watchers)}"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
